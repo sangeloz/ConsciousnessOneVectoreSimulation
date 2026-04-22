@@ -302,6 +302,7 @@ export default function MVCVectorInterno() {
   const driveMap     = Object.fromEntries(metrics.drives.map(d=>[d.id,d.mag]));
   const unconscious  = DRIVES.filter(d=>!d.uc);
   const btnBase      = { fontFamily:T.mono, letterSpacing:"0.10em", fontSize:10, cursor:"pointer", borderRadius:3, background:"transparent" };
+  const authorUrl    = "https://www.amazon.com/author/s_angeloz";
 
   return (
     <div style={{ background:T.bg, padding:"0.75rem", display:"flex", flexDirection:"column", gap:8,
@@ -415,6 +416,23 @@ export default function MVCVectorInterno() {
           </div>
 
         </div>
+      </div>
+
+      <div style={{ flexShrink:0, borderTop:`1px solid ${T.borderDim}`, paddingTop:8 }}>
+        <p style={{ margin:0, fontFamily:T.mono, fontSize:10, color:T.textSec, lineHeight:1.6 }}>
+          If you want to learn more about this topic and books,{" "}
+          <a href={authorUrl} target="_blank" rel="noopener noreferrer" style={{ color:T.cyanGlow }}>
+            click here
+          </a>
+          . Author: serge Angeloz.
+        </p>
+        <p style={{ margin:"4px 0 0", fontFamily:T.mono, fontSize:9, color:T.textDim }}>
+          Copyright April 2026 serge Angeloz.{" "}
+          <a href={authorUrl} target="_blank" rel="noopener noreferrer" style={{ color:T.textSec }}>
+            Amazon Author Page
+          </a>
+          .
+        </p>
       </div>
     </div>
   );
